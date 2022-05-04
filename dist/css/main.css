@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "Emfatick";
-  src: url("../../fonts/Emfatick-NF-Regular.otf") format("opentype");
+  src: url("../fonts/Emfatick-NF-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Herold";
-  src: url("../../fonts/Herold.ttf") format("truetype");
+  src: url("../fonts/Herold.ttf") format("truetype");
 }
 ul, ol, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -67,7 +67,7 @@ body {
 .hero-section {
   position: relative;
   height: 100vh;
-  background: url("../../images/page-header.jpeg");
+  background: url("../images/page-header.jpeg");
   background-position: 25% top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -92,7 +92,7 @@ body {
   font-family: "Emfatick", sans-serif;
   font-size: 9rem;
   line-height: 0.8;
-  background: url("../../images/gold.jpg"), black;
+  background: url("../images/gold.jpg"), black;
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;

@@ -1,0 +1,132 @@
+@use '../utils/breakpoints';
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('../../images/page-header.jpeg');
+    background-position: 25% top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.herobox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    > .title {
+        font-family: 'Emfatick', sans-serif;
+        font-size: 9rem;
+        line-height: .8;
+
+        background: url('../../images/gold.jpg'), black;
+        background-clip: text;
+        color: transparent;
+
+        @include breakpoints.media-breakpoint-up(992px) {
+            font-size: 11.5rem;
+        }
+    }
+
+    @include breakpoints.media-breakpoint-up(992px) {
+        justify-content: flex-end;
+    }
+}
+
+#wave {
+    position: absolute;
+    bottom: 0;
+}
+
+.events-section {
+    padding: 3rem 0;
+}
+
+.titlebox {
+    > .title {
+        line-height: .8;
+        color: #dac495;
+
+        .emfatik-font {
+            font-family: 'Emfatick', sans-serif;
+            font-size: 6rem;
+        }
+
+        .herold-font {
+            font-family: 'Herold', sans-serif;
+            font-size: 8rem;
+        }
+
+        // @include breakpoints.media-breakpoint-up(992px) {
+        //     .emfatik-font {
+        //         font-size: 5rem;
+        //     }
+    
+        //     .herold-font {
+        //         font-size: 7rem;
+        //     }
+        // }
+    }
+}
+
+.eventbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    @include breakpoints.media-breakpoint-up(992px) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+}
+
+.shows {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.showbox {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoints.media-breakpoint-up(768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.venuebox {
+    transform: skewY(-5deg);
+    transition: transform 150ms ease-in-out;
+
+    > .title,
+    > .venue {
+        text-transform: uppercase;
+    }
+
+    > .title {
+        color: #b35450;
+        font-weight: bold;
+        font-size: 1.3rem;
+
+        .date {
+            opacity: .7;
+            font-weight: 400;
+        }
+    }
+
+    > .venue {
+        color: #aaa59f;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    &:hover,
+    &:focus {
+        transform: skewY(-5deg) translateX(50px);
+    }
+}

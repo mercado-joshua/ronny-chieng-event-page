@@ -1,0 +1,222 @@
+*:where(::before, ::after) {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Emfatick";
+  src: url("../../fonts/Emfatick-NF-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Herold";
+  src: url("../../fonts/Herold.ttf") format("truetype");
+}
+ul, ol, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+:where(ul, ol) > li {
+  list-style: none;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+body {
+  background: #212121;
+}
+
+[class*=-btn] {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  border-style: none;
+  height: auto;
+}
+
+.max-wrapper {
+  max-width: 992px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url("../../images/page-header.jpeg");
+  background-position: 25% top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.herobox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+.herobox > .title {
+  font-family: "Emfatick", sans-serif;
+  font-size: 9rem;
+  line-height: 0.8;
+  background: url("../../images/gold.jpg"), black;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+@media only screen and (min-width: 992px) {
+  .herobox > .title {
+    font-size: 11.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .herobox {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+#wave {
+  position: absolute;
+  bottom: 0;
+}
+
+.events-section {
+  padding: 3rem 0;
+}
+
+.titlebox > .title {
+  line-height: 0.8;
+  color: #dac495;
+}
+.titlebox > .title .emfatik-font {
+  font-family: "Emfatick", sans-serif;
+  font-size: 6rem;
+}
+.titlebox > .title .herold-font {
+  font-family: "Herold", sans-serif;
+  font-size: 8rem;
+}
+
+.eventbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+@media only screen and (min-width: 992px) {
+  .eventbox {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.shows {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.showbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .showbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.venuebox {
+  -webkit-transform: skewY(-5deg);
+      -ms-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+.venuebox > .title,
+.venuebox > .venue {
+  text-transform: uppercase;
+}
+.venuebox > .title {
+  color: #b35450;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.venuebox > .title .date {
+  opacity: 0.7;
+  font-weight: 400;
+}
+.venuebox > .venue {
+  color: #aaa59f;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.venuebox:hover, .venuebox:focus {
+  -webkit-transform: skewY(-5deg) translateX(50px);
+      -ms-transform: skewY(-5deg) translateX(50px);
+          transform: skewY(-5deg) translateX(50px);
+}
